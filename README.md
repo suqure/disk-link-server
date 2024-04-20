@@ -35,12 +35,12 @@ mvm clean install
 ### 开发环境构建
 
 ```sh
-mvn run
+mvn clean install -Pdev
 ```
 
 ### 构建生产环境
 
 ```sh
-clean install
+mvn clean install -Ppro
 ```
 
