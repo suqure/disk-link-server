@@ -230,17 +230,8 @@
 		<jlibtorrent.version>1.2.19.0</jlibtorrent.version>
 		<sqlite-dialect.version>0.1.4</sqlite-dialect.version>
 		<project.log>/var/log/</project.log>
-		<docker.image>finedisk-image</docker.image>
-		<docker.container>finedisk-app</docker.container>
-		<docker.registry>harbor.finelink.ltd</docker.registry>
 		<project.port>8080</project.port>
-		<docker.host.port>8080</docker.host.port>
-		<docker.host.log>/home/docker/logs/disk/</docker.host.log>
 		<project.dir>/var/static/</project.dir>
-		<docker.host.dir>/home/docker/static/disk/</docker.host.dir>
-		<registry.project>library</registry.project>
-		<registry.username>admin</registry.username>
-		<registry.password>Harbor12345</registry.password>
 		<mysql-connector.version>8.0.25</mysql-connector.version>
 		<java.memory.limit>1024m</java.memory.limit>
 	</properties>
