@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ltd.finelink.tool.disk.desktop.controller.SettingController">
+   <children>
+      <VBox layoutX="237.0" layoutY="56.0" prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="80.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+         <children>
+            <HBox prefHeight="60.0" prefWidth="600.0">
+               <children>
+                  <Label prefHeight="50.0" prefWidth="123.0" text="设备认证：" />
+                  <CheckBox fx:id="authCheck" mnemonicParsing="false" prefHeight="50.0" prefWidth="118.0" text="开启认证" />
+                  <PasswordField fx:id="authPwd" prefHeight="50.0" prefWidth="173.0" promptText="请输入认证密码" />
+               </children>
+            </HBox>
+            <Separator prefHeight="16.0" prefWidth="590.0" />
+            <HBox prefHeight="60.0" prefWidth="600.0">
+               <children>
+                  <Label prefHeight="50.0" prefWidth="151.0" text="文件接收策略：" />
+                  <RadioButton fx:id="manual" mnemonicParsing="false" prefHeight="50.0" prefWidth="150.0" text="手动确认" />
+                  <RadioButton fx:id="autoConfirm" mnemonicParsing="false" prefHeight="50.0" prefWidth="150.0" text="自动确认" />
+                  <RadioButton fx:id="autoReject" mnemonicParsing="false" prefHeight="50.0" prefWidth="150.0" text="自动拒绝" />
+               </children>
+            </HBox>
+            <Separator prefHeight="27.0" prefWidth="600.0" />
+            <HBox prefHeight="60.0" prefWidth="200.0">
+               <children>
+                  <Label prefHeight="50.0" prefWidth="151.0" text="文件保存路径：" />
+                  <Text fx:id="downloadPath" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="345.3603515625" />
+                  <Button fx:id="pathButton" mnemonicParsing="false" prefHeight="47.0" prefWidth="121.0" text="更换路径" />
+               </children>
+            </HBox>
+            <Separator prefHeight="12.0" prefWidth="590.0" />
+         </children>
+      </VBox>
+      <Button fx:id="cancelButton" layoutX="353.0" layoutY="350.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="70.0" text="取消" AnchorPane.bottomAnchor="15.0" AnchorPane.rightAnchor="200.0" />
+      <Button fx:id="saveButton" layoutX="452.0" layoutY="350.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="70.0" text="保存" AnchorPane.bottomAnchor="15.0" AnchorPane.rightAnchor="50.0" />
+   </children>
+</AnchorPane>

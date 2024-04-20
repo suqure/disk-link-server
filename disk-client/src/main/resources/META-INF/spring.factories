@@ -1,0 +1,2 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+ltd.finelink.tool.disk.client.config.ClientConfig

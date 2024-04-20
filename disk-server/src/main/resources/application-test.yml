@@ -1,0 +1,16 @@
+disk:
+  netty:
+    port: 8080 
+spring:
+  datasource:
+    driver-class-name: org.sqlite.JDBC
+    url: jdbc:sqlite::resource:、var/static/disk.db    
+    type: com.alibaba.druid.pool.DruidDataSource
+    druid:
+      initialSize: 5
+      minIdle: 5
+      maxActive: 20
+
+logging:
+  level:
+   root: INFO

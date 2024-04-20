@@ -1,0 +1,6 @@
+disk:
+  server:
+    host: xxx.xxx.com #后台服务域名
+    protocol: WSS
+    api: https://xxx.xxx.com
+    port: 443

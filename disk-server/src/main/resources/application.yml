@@ -1,0 +1,27 @@
+spring:
+  application:
+    name: disk-server
+  profiles:
+    active: 
+    - '@project.active@'
+  mail:    
+    host: smtp.mxhichina.com
+    port: 465
+    username: support@xxx.com #用户名
+    password: xxxxxxxxxx #密码
+    protocol: smtps 
+    properties:      
+      mail:
+        smtps:
+          timeout: 5000
+          connectiontimeout: 5000
+          writetimeout: 3000
+mybatis-plus:
+  mapper-locations: classpath:mapper/**/*.xml
+  global-config:
+    db-config:
+      id-type: auto
+  configuration:
+    map-underscore-to-camel-case: true
+    call-setters-on-nulls: true
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl

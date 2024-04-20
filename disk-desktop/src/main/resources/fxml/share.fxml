@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ltd.finelink.tool.disk.desktop.controller.ShareController">
+   <children>
+      <VBox layoutX="278.0" layoutY="62.0" prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+         <children>
+            <HBox fx:id="menuBox" prefHeight="65.0" prefWidth="590.0" />
+            <TableView fx:id="dirView" prefHeight="321.0" prefWidth="590.0">
+              <columns>
+                <TableColumn fx:id="nameCol" prefWidth="243.0" text="名称" />
+                <TableColumn fx:id="typeCol" minWidth="0.0" prefWidth="86.0" text="类型" />
+                  <TableColumn fx:id="sizeCol" prefWidth="97.0" text="大小" />
+                  <TableColumn fx:id="actionCol" prefWidth="163.0" text="操作" />
+              </columns>
+            </TableView>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

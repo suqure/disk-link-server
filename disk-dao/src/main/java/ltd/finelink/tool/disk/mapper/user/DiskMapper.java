@@ -1,0 +1,16 @@
+package ltd.finelink.tool.disk.mapper.user;
+
+import ltd.finelink.tool.disk.entity.user.Disk;
+import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+
+/**
+ * <p>
+ *  Mapper 接口
+ * </p>
+ *
+ * @author jimmy
+ * @since 2023-08-11
+ */
+public interface DiskMapper extends BaseMapper<Disk> {
+
+}

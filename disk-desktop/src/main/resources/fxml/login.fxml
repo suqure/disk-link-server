@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ltd.finelink.tool.disk.desktop.controller.LoginController">
+   <children>
+      <VBox layoutX="250.0" layoutY="112.0" prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="80.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0">
+         <children>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label prefHeight="50.0" prefWidth="189.0" text="账号:" />
+                  <TextField fx:id="userAcc" prefHeight="50.0" prefWidth="360.0" promptText="请输入用户名" />
+               </children>
+            </HBox>
+            <HBox prefHeight="89.0" prefWidth="560.0">
+               <children>
+                  <Label prefHeight="50.0" prefWidth="189.0" text="密码:" />
+                  <PasswordField fx:id="userPwd" prefHeight="50.0" prefWidth="360.0" promptText="请输入密码" />
+               </children>
+            </HBox>
+            <HBox prefHeight="86.0" prefWidth="560.0">
+               <children>
+                  <CheckBox fx:id="remCheck" mnemonicParsing="false" prefHeight="86.0" prefWidth="570.0" text="下次打开应用自动登录" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <Button fx:id="cancelBtn" layoutX="278.0" layoutY="330.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="82.0" text="取消" />
+      <Button fx:id="loginBtn" layoutX="441.0" layoutY="330.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="82.0" text="登录" />
+   </children>
+</AnchorPane>

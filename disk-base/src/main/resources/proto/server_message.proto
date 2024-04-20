@@ -1,0 +1,38 @@
+syntax = "proto3";
+
+package protobuf;
+
+option java_multiple_files = true;
+option java_package = "ltd.finelink.tool.disk.protobuf";
+option java_outer_classname = "ServerProto";
+message ServerBody {
+	int32 type = 1;
+	string sid = 2;
+	optional string code = 3;
+	optional string msgType = 4;
+	optional string msg = 5;
+	optional string cid = 6;
+	optional string sub = 7;
+	optional string fromId = 8;
+	optional string toId = 9;
+	optional string gid = 10;
+	optional int64 timestamp=11;
+	optional bytes content = 12;
+}
+
+
+
+message ServerMessage {
+	enum ServerMsgType{
+		SYSTEM = 0;
+		CHAT = 1;
+		CUSTOM = 2;
+		SUBSCRIBE = 3;
+		WEBRTC = 4;
+	}
+	ServerMsgType type = 1;
+	string biz = 2;
+	optional string traceId = 3;
+	int64 timestamp = 4;
+	repeated ServerBody body = 5;
+}

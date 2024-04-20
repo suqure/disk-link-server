@@ -1,0 +1,21 @@
+disk:
+  netty:
+    port: 8080 
+  dht:
+    ip: xxx.xxx.xxx.xxx #dht服务ip
+    enabled: false
+spring:
+  datasource:
+    driver-class-name: org.sqlite.JDBC
+    url: jdbc:sqlite:/var/static/disk.db    
+    type: com.alibaba.druid.pool.DruidDataSource
+    druid:
+      initialSize: 5
+      minIdle: 5
+      maxActive: 20
+
+logging:
+  level:
+   root: INFO
+  file:
+    path: '@project.log@' 

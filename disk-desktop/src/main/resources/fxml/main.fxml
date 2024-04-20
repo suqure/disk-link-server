@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ltd.finelink.tool.disk.desktop.controller.MainController">
+   <children>
+      <VBox layoutX="98.0" layoutY="14.0" prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <MenuBar>
+              <menus>
+                <Menu mnemonicParsing="false" text="文件">
+                  <items>
+                    <MenuItem fx:id="infoItem" mnemonicParsing="false" text="打开下载目录" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="编辑">
+                  <items>
+                    <MenuItem fx:id="settingItem" mnemonicParsing="false" text="程序设置" />
+                        <MenuItem fx:id="accountItem" mnemonicParsing="false" text="用户账号" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="帮助">
+                  <items>
+                    <MenuItem fx:id="aboutItem" mnemonicParsing="false" text="关于" />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+            <TabPane minHeight="-Infinity" minWidth="-Infinity" tabClosingPolicy="UNAVAILABLE">
+               <tabs>
+                  <Tab text="连接信息">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0">
+                           <children>
+                              <VBox AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <HBox alignment="CENTER" prefHeight="51.0" prefWidth="229.0" spacing="10.0">
+                                       <children>
+                                          <Button fx:id="refreshButton" mnemonicParsing="false" prefHeight="36.0" prefWidth="120.0" text="更换设备码" />
+                                          <Label text="设备码：" />
+                                          <Text fx:id="currentCode" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="119.3603515625" />
+                                          <TextField fx:id="deviceCode" prefHeight="36.0" prefWidth="115.0" promptText="请输入设备码" />
+                                          <Button fx:id="button" prefHeight="36.0" prefWidth="120.0" text="添加设备" />
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                       </VBox.margin>
+                                    </HBox>
+                                    <TableView fx:id="tableView">
+                                       <columns>
+                                          <TableColumn fx:id="deviceCol" prefWidth="116.0" text="设备号" />
+                                          <TableColumn fx:id="typeCol" prefWidth="115.0" text="类型" />
+                                          <TableColumn fx:id="statusCol" prefWidth="78.0" text="状态" />
+                                          <TableColumn fx:id="rttCol" prefWidth="75.0" text="延时" />
+                                          <TableColumn fx:id="actionCol" prefWidth="215.0" text="操作" />
+                                       </columns>
+                                    </TableView>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab text="分享设置">
+                     <content>
+                        <TabPane prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE">
+                          <tabs>
+                            <Tab text="分享文件">
+                              <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <VBox prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                             <children>
+                                                <HBox prefHeight="45.0" prefWidth="120.0" spacing="10.0">
+                                                   <children>
+                                                      <Button fx:id="fileButton" mnemonicParsing="false" prefHeight="36.0" prefWidth="100.0" text="添加文件" />
+                                                      <Button fx:id="deleteButton" mnemonicParsing="false" prefHeight="36.0" prefWidth="100.0" text="删除选中">
+                                                         <HBox.margin>
+                                                            <Insets />
+                                                         </HBox.margin>
+                                                      </Button>
+                                                   </children>
+                                                   <VBox.margin>
+                                                      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                   </VBox.margin>
+                                                </HBox>
+                                                <TableView fx:id="shareView">
+                                                   <columns>
+                                                      <TableColumn fx:id="checkCol" minWidth="0.0" prefWidth="70.0" text="选择" />
+                                                      <TableColumn fx:id="nameCol" prefWidth="199.0" text="文件名" />
+                                                      <TableColumn fx:id="sizeCol" prefWidth="123.0" text="大小" />
+                                                      <TableColumn fx:id="pathCol" prefWidth="207.0" text="路径" />
+                                                   </columns>
+                                                </TableView>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </AnchorPane>
+                              </content>
+                            </Tab>
+                            <Tab text="分享目录">
+                              <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <VBox prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                             <children>
+                                                <HBox prefHeight="45.0" prefWidth="120.0" spacing="10.0">
+                                                   <children>
+                                                      <Button fx:id="dirButton" mnemonicParsing="false" prefHeight="36.0" prefWidth="100.0" text="添加目录" />
+                                                      <Button fx:id="dirDelButton" mnemonicParsing="false" prefHeight="36.0" prefWidth="100.0" text="删除选中">
+                                                         <HBox.margin>
+                                                            <Insets />
+                                                         </HBox.margin>
+                                                      </Button>
+                                                   </children>
+                                                   <VBox.margin>
+                                                      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                   </VBox.margin>
+                                                </HBox>
+                                                <TableView fx:id="shareDirView">
+                                                   <columns>
+                                                      <TableColumn fx:id="checkCol2" minWidth="0.0" prefWidth="70.0" text="选择" />
+                                                      <TableColumn fx:id="nameCol2" prefWidth="266.0" text="名称" />
+                                                      <TableColumn fx:id="pathCol2" prefWidth="264.0" text="路径" />
+                                                   </columns>
+                                                </TableView>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </AnchorPane>
+                              </content>
+                            </Tab>
+                          </tabs>
+                        </TabPane>
+                     </content>
+                  </Tab>
+                  <Tab text="下载记录">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <VBox prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <TableView fx:id="downloadView">
+                                       <columns>
+                                          <TableColumn fx:id="fDeviceCol" prefWidth="84.0" text="设备号" />
+                                          <TableColumn fx:id="fNameCol" prefWidth="86.0" text="名称" />
+                                          <TableColumn fx:id="fPathCol" prefWidth="110.0" text="路径" />
+                                          <TableColumn fx:id="fSizeCol" prefWidth="61.0" text="大小" />
+                                          <TableColumn fx:id="fStatusCol" prefWidth="84.0" text="状态" />
+                                          <TableColumn fx:id="fActionCol" prefWidth="173.0" text="操作" />
+                                       </columns>
+                                       <VBox.margin>
+                                          <Insets />
+                                       </VBox.margin>
+                                    </TableView>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab text="上传记录">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <VBox prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <TableView fx:id="uploadView">
+                                       <columns>
+                                          <TableColumn fx:id="uDeviceCol" prefWidth="89.0" text="设备号" />
+                                          <TableColumn fx:id="uNameCol" prefWidth="91.0" text="名称" />
+                                          <TableColumn fx:id="uPathCol" prefWidth="91.0" text="路径" />
+                                          <TableColumn fx:id="uSizeCol" prefWidth="70.0" text="大小" />
+                                          <TableColumn fx:id="uStatusCol" prefWidth="104.0" text="状态" />
+                                          <TableColumn fx:id="uActionCol" prefWidth="154.0" text="操作" />
+                                       </columns>
+                                    </TableView>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+               </tabs>
+            </TabPane>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
