@@ -10,7 +10,7 @@
 ```css
 ├─ disk-base #基础pojo以及工具类
 ├─ disk-client #桌面端客户端底层实现
-├─ disk-dao #数据库dao层 sqlit
+├─ disk-dao #数据库dao层 sqlite
 ├─ disk-desktop #桌面端APP页面逻辑 JAVAFX实现
 ├─ disk-server #后台服务端API spring boot + netty
 
