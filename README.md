@@ -1,7 +1,7 @@
 
 ### 
 ### 
-本项目为[disk-link-vue]([基于WEBRTC的文件传输工具VUE前端,主要包含功能P2P文件传输，视频会议，视频录制](https://github.com/suqure/disk-link-vue))后台代码以及桌面版代码，基于spring boot ,netty ,javafx框架
+本项目为[disk-link-vue]([suqure/disk-link-vue: 基于WEBRTC的文件传输工具VUE前端,主要包含功能P2P文件传输，视频会议，视频录制](https://github.com/suqure/disk-link-vue))后台代码以及桌面版代码，基于spring boot ,netty ,javafx框架
 
 项目生产体验地址：http://disk.finelink.ltd
 
